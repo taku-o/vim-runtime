@@ -10,11 +10,11 @@ set cpo&vim
 
 " mapping
 if !hasmapto('<Plug>IncrementCommandLineNumber', 'c')
-    cmap <c-a> <Plug>IncrementCommandLineNumber
+    cnoremap <c-a> <Plug>IncrementCommandLineNumber
 endif
 cnoremap <Plug>IncrementCommandLineNumber <c-b>"<cr>:call g:IncrementCommandLineNumbering(1)<cr>:<c-r>=g:IncrementedCommandLine()<cr>
 if !hasmapto('<Plug>DecrementCommandLineNumber', 'c')
-    cmap <c-x> <Plug>DecrementCommandLineNumber
+    cnoremap <c-x> <Plug>DecrementCommandLineNumber
 endif
 cnoremap <Plug>DecrementCommandLineNumber <c-b>"<cr>:call g:IncrementCommandLineNumbering(-1)<cr>:<c-r>=g:IncrementedCommandLine()<cr>
 
@@ -156,9 +156,9 @@ add put these code to your vimrc .
 
     " (for example)
     " increment with Shift-Up
-    cmap <S-Up> <Plug>IncrementCommandLineNumber
+    cnoremap <S-Up> <Plug>IncrementCommandLineNumber
     " decrement with Shift-Down
-    cmap <S-Down> <Plug>DecrementCommandLineNumber
+    cnoremap <S-Down> <Plug>DecrementCommandLineNumber
 
 
 ------------------------------------------------------------------------------
